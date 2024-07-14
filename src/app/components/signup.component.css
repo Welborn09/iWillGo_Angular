@@ -1,0 +1,21 @@
+
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.signup-button {
+  background: #fff;
+  color: #007bff;
+  padding: 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-property: background;
+  transition-duration: 0.3s;
+}
+
+.signup-button:hover {
+  background: #B8E648;
+}

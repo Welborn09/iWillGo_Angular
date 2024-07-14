@@ -1,0 +1,23 @@
+<section class="login-section">
+  <div class="login-section-panel">
+    <div class="container login-section-container">
+      <a href="/" class="logo">
+        <img src="./../../assets/images/logo_v2.jpg" width="auto" height="75px" />
+      </a>
+      <div class="login-input-grid">
+        <div class="login-form-panel">
+          <h1>Welcome Back!</h1>
+          <form onsubmit="login()">
+            <input class="form-input" type="email"
+             name="email" placeholder="Email"
+             [(ngModel)]="formData.email">
+             <input class="form-input" type="password"
+             name="password" placeholder="Password"
+             [(ngModel)]="formData.password">
+            <button class="login-form-submit-btn">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

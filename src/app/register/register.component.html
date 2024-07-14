@@ -1,0 +1,79 @@
+<section class="register-section">
+  <div class="register-main-div">
+    <div class="register-panel-container">
+      <div class="register-left-panel">
+        <div class="register-left-sub-panel">
+          <div class="register-left-header">
+            <a href="/">
+              <img class="register-header-logo" src="./../../assets/images/logo_v2.jpg">
+            </a>
+          </div>
+          <div class="register-profile">
+            <div class="register-profile-h2">Create your personal account</div>
+            <div class="register-profile-details">
+                <div class="register-form-firstlast">
+                  <div class="register-form-input-container">
+                    <div class="register-form-input-panel">
+                      <div class="register-form-h5">First Name</div>
+                        <div class="register-form-input-div">
+                          <input type="text" class="input" name="firstname" placeholder="First Name" [(ngModel)]="member.firstname"  (ngModelChange)="setFirst($event)">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="register-form-input-container">
+                    <div class="register-form-input-panel">
+                      <div class="register-form-h5">Last Name</div>
+                        <div class="register-form-input-div">
+                          <input type="text" class="input"  name="lastname" placeholder="Last Name" [(ngModel)]="member.lastname"  (ngModelChange)="setLast($event)">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="register-form-email-panel">
+                  <div class="register-form-email-container">
+                    <div class="register-form-h5">Email Address</div>
+                    <div class="register-form-input-div">
+                      <input type="text" class="input"  name="email" placeholder="Email Address"  [(ngModel)]="member.email" (ngModelChange)="setEmail($event)">
+                    </div>
+                  </div>
+                </div>
+                <div class="register-form-password-panel">
+                  <div class="register-form-password-container">
+                    <div class="register-form-input-panel">
+                      <div class="register-form-h5">Password</div>
+                      <div class="register-form-input-div">
+                        <input type="password" class="input"  name="password" placeholder="Enter Your Password" [(ngModel)]="member.password" (ngModelChange)="setPassword($event)">
+                      </div>
+                    </div>
+                    <div class="register-form-shadow"></div>
+                  </div>
+                </div>
+                <div class="register-confirm-panel">
+                  <div class="register-confirm-container">
+                    <input class="register-confirm-checkbox" type="checkbox" (ngModelChange)="setConfirmed($event)">
+                    <label class="register-confirm-label">
+                      <div class="register-confirm-label.div">
+                        By continuing, you agree to that you are at least 13 years old. Plus, you agree to all this legal stuff:
+                      <a href="https://pointapp.org/terms-of-use" target="_blank">Terms of Use</a>,
+                      <a href="https://pointapp.org/community-guidelines" target="_blank">Community Guidelines</a>
+                      and <a href="https://pointapp.org/privacy-policy" target="_blank">Privacy Policy</a>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="register-continue-btn-panel">
+                  <button class="register-continue-btn" (click)="onSubmit()">Continue</button>
+                </div>
+            </div>
+            <div class="register-already-member">
+              Already a member? Click <a href='/login'>Here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="register-right-panel">
+
+      </div>
+    </div>
+  </div>
+</section>

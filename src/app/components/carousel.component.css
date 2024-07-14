@@ -1,0 +1,62 @@
+.cover {
+  min-height: 700px !important;
+  position: relative !important;
+  z-index: 0 !important;
+  display: grid !important;
+  align-items: center !important;
+}
+
+.panel-inner {
+  height: 100%;
+}
+
+.panel-cover {
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+}
+
+.panel-info {
+  max-width: 700px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.panel-info-h5 {
+  font-size: 54px;
+  font-weight: 700;
+  color: #B8E648;
+  cursor: default;
+  padding-bottom: 15px;
+}
+
+.panel-info-link {
+  padding: 10px 30px;
+  color: #B8E648;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 700;
+  transition: 0.3s ease-in;
+  border: 2px solid #203936;
+  background: #203936;
+  cursor: pointer;
+}
+
+.slide1 {
+  background: url(./../../assets/images/feed_my_sheep.jpg) no-repeat;
+  background-size: cover !important;
+}
+
+.slide2 {
+  background: url(./../../assets/images/cloth_my_sheep.jpg) no-repeat;
+  background-size: cover !important;
+}
+
+.slide3 {
+  background: url(./../../assets/images/clean_community.jpg) no-repeat;
+  background-size: cover !important;
+}
