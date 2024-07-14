@@ -1,5 +1,5 @@
 {
-  "/api/*": {
+  "/api": {
       "target": "http://0.0.0.0:4200",
       "secure": false,
       "logLevel": "debug",
