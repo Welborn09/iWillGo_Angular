@@ -7,15 +7,15 @@
       <div class="login-input-grid">
         <div class="login-form-panel">
           <h1>Welcome Back!</h1>
-          <form onsubmit="login()">
             <input class="form-input" type="email"
              name="email" placeholder="Email"
-             [(ngModel)]="formData.email">
+             [(ngModel)]="user.email"
+             (ngModelChange)="setEmail($event)">
              <input class="form-input" type="password"
              name="password" placeholder="Password"
-             [(ngModel)]="formData.password">
-            <button class="login-form-submit-btn">Login</button>
-          </form>
+             [(ngModel)]="user.password"
+             (ngModelChange)="setPassword($event)">
+            <button class="login-form-submit-btn" (click)="login()">Login</button>
         </div>
       </div>
     </div>

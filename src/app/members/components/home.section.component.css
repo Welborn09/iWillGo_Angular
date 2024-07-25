@@ -1,0 +1,39 @@
+
+
+.breadcrumb {
+  background-size: cover;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.33)), url(./../../../assets/images/4.jpg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.member-header-h2 {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.member-header-p {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.member-header-a {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+@media (min-width: 576px) {
+  .pb-sm-5, .py-sm-5 {
+      padding-bottom: 3rem !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .pb-sm-5, .py-sm-5 {
+      padding-top: 3rem !important;
+  }
+}

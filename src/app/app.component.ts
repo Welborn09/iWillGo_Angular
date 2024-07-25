@@ -17,22 +17,9 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
       this.isLoggedIn = this.storageService.isLoggedIn();
 
-      if (this.isLoggedIn) {
-        const user = this.storageService.getUser();
-        this.username = user.username;
-      }
-  }
-
-  logout(): void {
-    this.authService.logout()
-      .then((response) => {
-        console.log(response);
-        if (response.succeeded) {
-          this.storageService.clean();
-          window.location.reload();
-        } else {
-          console.log(response.statusMessage);
-        }
-      });
+      // if (this.isLoggedIn) {
+      //   const user = this.storageService.getUser();
+      //   this.username = user.username;
+      // }
   }
 }

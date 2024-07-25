@@ -20,3 +20,11 @@ export class Opportunity extends BaseModel {
     super();
   }
 }
+
+export class OpportunityResponse {
+  items: [];
+  count: string;
+  isAuthorized: boolean;
+
+  constructor() {}
+}

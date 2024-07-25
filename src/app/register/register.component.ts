@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../_services/auth.service';
 import { Member, RegisterMember } from '../models/member.model';
 
@@ -14,7 +15,7 @@ export class RegisterComponent {
   errorMessage = '';
   confirmed: boolean = false;
 
-  constructor(private authService: AuthService) {
+  constructor(private router: Router, private authService: AuthService) {
     this.member = new RegisterMember();
   }
 
@@ -26,6 +27,7 @@ export class RegisterComponent {
         if (response.succeeded) {
           this.isSuccessful = true;
           this.isSignUpFailed = false;
+          this.router.navigate(['/login']);
         } else {
           this.errorMessage = response.statusMessage;
           this.isSignUpFailed = true;

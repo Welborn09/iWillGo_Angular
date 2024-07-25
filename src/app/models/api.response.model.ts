@@ -1,3 +1,4 @@
+import { Member } from "./member.model";
 
 
 export class ApiResponse {
@@ -8,8 +9,10 @@ export class ApiResponse {
   validationMessages: [];
 }
 
-export class BackgroundProcessResponse {
-  key: string;
-  data: any;
-  status: string;
+export class AuthenticatedResponse {
+  member: Member;
+  token: string;
+  userFound: boolean;
+  succeeded: boolean
+  statusMessage: any;
 }

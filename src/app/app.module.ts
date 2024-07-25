@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,6 +20,18 @@ import { AuthService } from './_services/auth.service';
 import { FormsModule } from '@angular/forms';
 import { OpportunityService } from './_services/opportunity.service';
 import { ApiService } from './_services/api.service';
+import { EventsComponent } from './members/components/events.component';
+import { MemberHomeComponent } from './members/home/home.component';
+import { CustomTimePipe } from './_helpers/custom-time.pipe';
+import { SharedModule } from './shared/shared.module';
+import { MemberHomeSectionComponent } from './members/components/home.section.component';
+import { MemberNavComponent } from './members/components/member.nav.component';
+import { MemberEventsComponent } from './members/events/my.events.component';
+import { JwtModule } from '@auth0/angular-jwt';
+
+export function tokenGetter() {
+  return localStorage.getItem("jwt");
+}
 
 @NgModule({
   declarations: [
@@ -31,7 +43,11 @@ import { ApiService } from './_services/api.service';
     CarouselComponent,
     FeaturesComponent,
     TimelineComponent,
-    SignUpComponent
+    SignUpComponent,
+    MemberHomeComponent,
+    MemberNavComponent,
+    MemberHomeSectionComponent,
+    MemberEventsComponent
   ],
   imports: [
     CommonModule,
@@ -39,6 +55,14 @@ import { ApiService } from './_services/api.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    EventsComponent,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ["localhost:7271"],
+        disallowedRoutes: []
+      }
+    })
   ],
   providers: [httpInterceptorProviders,
     ApiService,
@@ -46,6 +70,9 @@ import { ApiService } from './_services/api.service';
     StorageService,
     AuthService,
     OpportunityService,
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   bootstrap: [AppComponent]
 })

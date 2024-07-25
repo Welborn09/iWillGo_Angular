@@ -1,0 +1,44 @@
+<section>
+  <div class="events-grid-main">
+    <div class="container events-grid-container">
+      <div class="events-grid" *ngIf="dataLoaded">
+        @for(event of events; track event.eventName) {
+          <div class="events-grid-item">
+            <div class="events-grid-item-card">
+              <a class="events-grid-item-card-a">
+                <img class="events-grid-item-card-a-img" src="./../../../assets/images/feed_my_sheep.jpg" />
+              </a>
+              <a class="events-grid-item-card-a">
+                <div class="events-grid-item-col2">
+                  <ul class="events-grid-item-ul image-caption">
+                    <li class="events-grid-item-li">
+                      <a class="events-grid-item-li-a">{{ConvertDate(event.eventDate)}}</a>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <div class="events-grid-item-body">
+              <div>
+                <div>
+                  <div class="events-grid-item-body-title">{{event.eventName}}</div>
+                  <div class="events-grid-item-body-p">
+                    <p class="events-grid-item-body-time">Time:</p>
+                      {{event.eventTimeFrom | customTime }}-{{event.eventTimeTo | customTime }}
+                  </div>
+                  <div class="events-grid-item-body-p">
+                    <p class="events-grid-item-body-place">Place:</p>
+                    {{event.city}}, {{event.state}}
+                  </div>
+                  <a class="events-grid-item-body-a">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        } @empty {
+          <p> No Events Found</p>
+        }
+      </div>
+    </div>
+  </div>
+</section>
